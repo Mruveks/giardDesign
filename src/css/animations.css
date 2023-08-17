@@ -23,3 +23,78 @@
 		width: 0; /* Adjust the desired expanded width */
 	}
 }
+
+.animate-on-scroll {
+	opacity: 0;
+	transform: translate(-300px, 0);
+	transition: all 1s ease-out;
+}
+
+.animate-top-down {
+	opacity: 0;
+	transform: translate(0, 10px);
+	transition: all 0.5s ease-out;
+	transition-delay: 0.2s;
+}
+
+.menu-item:nth-child(1) {
+	transition-delay: 0.2s;
+}
+.menu-item:nth-child(2) {
+	transition-delay: 0.4s;
+}
+.menu-item:nth-child(3) {
+	transition-delay: 0.6s;
+}
+.menu-item:nth-child(4) {
+	transition-delay: 0.8s;
+}
+.menu-item:nth-child(5) {
+	transition-delay: 1s;
+}
+
+.animate-bottom-top {
+	opacity: 0;
+	transform: translate(0, 20px);
+	transition: all 0.4s ease-out;
+	transition-delay: 0.2s;
+}
+
+.animate {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.opacity-animate {
+	opacity: 10;
+	transition: all 0.4s ease-out;
+	transition-delay: 0.2s;
+}
+
+.animate-card:hover {
+  transform: translateY(-20px);
+  transition: transform 0.4s ease-in-out
+}
+
+.hover-underline-animation-black {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation-black::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-black:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

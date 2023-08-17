@@ -30,9 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	window.addEventListener("scroll", () => {
-		if (searchbar.style.width !== 0) {
+		if (searchbar.classList.contains("click-animation")) {
 			searchbar.classList.remove("click-animation");
-			searchbar.classList.add("close-animation");
+      searchbar.classList.add("close-animation");
 		}
 	});
 });
+

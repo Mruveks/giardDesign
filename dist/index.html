@@ -4,30 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>giardDesign</title>
 		<link rel="stylesheet" href="output.css" />
 		<link rel="stylesheet" href="../src/css/style.css" />
 		<link rel="stylesheet" href="../src/css/animations.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+		/>
 	</head>
 
 	<body>
 		<nav>
-			<header><span class="font-bold">giard</span>Design</header>
+			<header class="animate-top-down">
+				<span class="font-bold">giard</span>Design
+			</header>
 			<ul class="flex gap-12">
-				<li class="menu-item" id="oferta-dropdown">
+				<li class="menu-item animate-top-down hover-underline-animation-black" id="oferta-dropdown">
 					<span class="submenu-toggle"
 						>Oferta <img src="../src/img/arrow-down.svg" alt="expand"
 					/></span>
 					<ul class="submenu">
-						<li class="submenu-item">Projekty</li>
-						<li class="submenu-item">Wizualizaje</li>
-						<li class="submenu-item">Realizacje</li>
+						<li id="submenu-item" class="hover-underline-animation-black">Projekty</li>
+						<li id="submenu-item" class="hover-underline-animation-black">Wizualizaje</li>
+						<li id="submenu-item" class="hover-underline-animation-black">Realizacje</li>
 					</ul>
 				</li>
-				<li class="menu-item">O firmie</li>
-				<li class="menu-item">Realizacje</li>
-				<li class="menu-item">Kontakt</li>
-				<li class="menu-item flex">
+				<li class="menu-item animate-top-down hover-underline-animation-black">O firmie</li>
+				<li class="menu-item animate-top-down hover-underline-animation-black">Realizacje</li>
+				<li class="menu-item animate-top-down hover-underline-animation-black">Kontakt</li>
+				<li class="menu-item flex animate-top-down">
 					<input
 						type="text"
 						id="searchbar"
@@ -37,19 +43,18 @@
 					<img
 						src="../src/img/search.svg"
 						id="search-toggle"
-						class="search-toggle"
+						class="search-toggle "
 						alt="search"
 					/>
 				</li>
 			</ul>
 		</nav>
-		<div>
-			<img
-				src="../src/img/hero-photo.jpg"
-				alt="hero-photo"
-				class="min-h-[500px] fixed -top-20 right-0 w-[48%] z-10"
-			/>
-		</div>
+		<img
+			src="../src/img/hero-photo.jpg"
+			alt="hero-photo"
+			class="min-h-[500px] fixed -top-20 right-0 w-[48%] z-10"
+		/>
+
 		<img
 			src="/src/img/firma-photo.jpg"
 			alt="garden-photo"
@@ -59,10 +64,10 @@
 		<section id="hero" class="grid grid-cols-2 bg-[#DCC1AB] h-[737px] relative">
 			<article class="grid gap-20 pl-20 items-center z-20 bg-[#DCC1AB]">
 				<span class="flex flex-col items-start gap-10 flex-shrink-0">
-					<h1 class="text-4xl font-medium leading-tight">
+					<h1 class="text-4xl font-medium leading-tight animate-on-scroll">
 						Nowoczesna aranżacja Twojego ogrodu
 					</h1>
-					<p class="text-[16px] font-normal leading-6">
+					<p class="text-[16px] font-normal leading-6 animate-bottom-top">
 						Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
 						realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
 						podejściem do każdego projektu.
@@ -112,10 +117,10 @@
 			<article class="flex flex-col gap-2 mx-40">
 				<span class="text-xs text-green-600">Oferta</span>
 				<div class="flex flex-col gap-8">
-					<h2 class="text-4xl font-medium leading-tight">
+					<h2 class="text-4xl font-medium leading-tight animate-on-scroll">
 						Działamy <span class="italic">kompleksowo</span>
 					</h2>
-					<p class="text-[16px] font-normal leading-6">
+					<p class="text-[16px] font-normal leading-6 animate-bottom-top">
 						Oferujemy kompletną obsługę inwestycji terenów zielonych.
 						Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
 						Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
@@ -124,8 +129,8 @@
 				</div>
 			</article>
 
-			<article class="flex flex-row gap-16 justify-around">
-				<div id="card">
+			<article id="card_container" class="flex flex-row gap-16 justify-around">
+				<div id="card" class="animate-on-scroll animate-card">
 					<span class="flex flex-col gap-8 px-10 py-12">
 						<img src="/src/img/Icon.png" alt="pencil" class="w-10 h-10" />
 						<div class="flex flex-col gap-4">
@@ -137,24 +142,17 @@
 						</div>
 					</span>
 					<button
-						class="
-							flex flex-row
-							gap-2
-							px-10
-							py-12
-							items-center
-							underline underline-offset-8
-						"
+						class="flex flex-row gap-2 px-10 py-12 items-center underline"
 					>
 						<p>Dowiedz się więcej</p>
 						<img src="/src/img/Arrow 1.svg" class="rotate-180 h-4 w-4" />
 					</button>
 				</div>
-				<div id="card">
+				<div id="card" class="animate-on-scroll animate-card">
 					<span class="flex flex-col gap-8 px-10 py-12">
 						<img
 							src="/src/img/Wizualizacje.png"
-							alt="pencil"
+							alt="Wizualizacje"
 							class="w-16 h-10"
 						/>
 						<div class="flex flex-col gap-4">
@@ -179,7 +177,7 @@
 						<img src="/src/img/Arrow 1.svg" class="rotate-180 h-4 w-4" />
 					</button>
 				</div>
-				<div id="card">
+				<div id="card" class="animate-on-scroll animate-card">
 					<span class="flex flex-col gap-8 px-10 py-12">
 						<img src="/src/img/Realizacje.png" alt="pencil" class="w-10 h-10" />
 						<div class="flex flex-col gap-4">
@@ -217,11 +215,11 @@
 				<div class="flex flex-col items-start gap-10 flex-shrink-0">
 					<span>
 						<p class="text-xs">O firmie</p>
-						<h3 class="text-4xl font-medium leading-tight">
+						<h3 class="text-4xl font-medium leading-tight animate-on-scroll">
 							Tworzymy z <span class="italic">pasją</span>
 						</h3>
 					</span>
-					<p class="text-[16px] font-normal leading-6">
+					<p class="text-[16px] font-normal leading-6 animate-bottom-top">
 						Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
 						wykwalifikowani projektanci oraz architekci, których zadaniem jest
 						rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
@@ -242,7 +240,7 @@
 		>
 			<article class="px-20">
 				<span class="text-xs text-green-600">Realizacje</span>
-				<h4 class="text-4xl font-medium leading-tight">
+				<h4 class="text-4xl font-medium leading-tight animate-on-scroll">
 					Nasze <span class="italic">projekty</span>
 				</h4>
 			</article>
@@ -308,5 +306,6 @@
 			</article>
 		</footer>
 		<script src="../src/scripts/eventListeners.js"></script>
+		<script src="../src/scripts/scrollAnimations.js"></script>
 	</body>
 </html>

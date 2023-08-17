@@ -45,8 +45,7 @@ li {
 	z-index: 50;
 	opacity: 0;
 }
-
-.submenu-item {
+#submenu-item {
 	height: 40px;
 	display: flex;
 	padding-right: 8px;
@@ -54,7 +53,7 @@ li {
 	align-items: center;
 }
 
-.submenu-item:hover {
+#submenu-item:hover {
 	background-color: #dcc1ab;
 	transition: 0.3s ease-in-out;
 }
