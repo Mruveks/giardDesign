@@ -1,4 +1,4 @@
-const animation_elements = document.querySelectorAll(".animate-on-scroll, .animate-top-down, .animate-bottom-top, .opacity-animate");
+const animation_elements = document.querySelectorAll(".animate-on-scroll, .animate-top-down, .animate-bottom-top, .opacity-animate, .button-animate-bottom-top");
 
 const observer = new IntersectionObserver(
 	(entries) => {

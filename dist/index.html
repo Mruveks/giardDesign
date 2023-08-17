@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>giardDesign</title>
 		<link rel="stylesheet" href="output.css" />
 		<link rel="stylesheet" href="../src/css/style.css" />
@@ -12,27 +12,44 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	</head>
 
 	<body>
-		<nav>
+		<nav class="fixed flex lg:w-full py-[24px] lg:px-20 sm:px-0 justify-between items-center bg-white z-50">
 			<header class="animate-top-down">
-				<span class="font-bold">giard</span>Design
+				<img src="/src/img/giarddesign.svg" alt="logo"/>
 			</header>
-			<ul class="flex gap-12">
-				<li class="menu-item animate-top-down hover-underline-animation-black" id="oferta-dropdown">
+			<ul class="flex gap-12 items-center">
+				<li
+					class="menu-item animate-top-down nav-hover-underline-animation-black"
+					id="oferta-dropdown"
+				>
 					<span class="submenu-toggle"
-						>Oferta <img src="../src/img/arrow-down.svg" alt="expand"
+						>Oferta <img src="../src/img/nav-arrow-down.svg" alt="expand"
 					/></span>
 					<ul class="submenu">
-						<li id="submenu-item" class="hover-underline-animation-black">Projekty</li>
-						<li id="submenu-item" class="hover-underline-animation-black">Wizualizaje</li>
-						<li id="submenu-item" class="hover-underline-animation-black">Realizacje</li>
+						<li id="submenu-item" class="nav-hover-underline-animation-black">
+							Projekty
+						</li>
+						<li id="submenu-item" class="nav-hover-underline-animation-black">
+							Wizualizaje
+						</li>
+						<li id="submenu-item" class="nav-hover-underline-animation-black">
+							Realizacje
+						</li>
 					</ul>
 				</li>
-				<li class="menu-item animate-top-down hover-underline-animation-black">O firmie</li>
-				<li class="menu-item animate-top-down hover-underline-animation-black">Realizacje</li>
-				<li class="menu-item animate-top-down hover-underline-animation-black">Kontakt</li>
+				<li class="menu-item animate-top-down nav-hover-underline-animation-black">
+					O firmie
+				</li>
+				<li class="menu-item animate-top-down nav-hover-underline-animation-black">
+					Realizacje
+				</li>
+				<li class="menu-item animate-top-down nav-hover-underline-animation-black">
+					Kontakt
+				</li>
 				<li class="menu-item flex animate-top-down">
 					<input
 						type="text"
@@ -43,46 +60,51 @@
 					<img
 						src="../src/img/search.svg"
 						id="search-toggle"
-						class="search-toggle "
+						class="search-toggle"
 						alt="search"
 					/>
 				</li>
 			</ul>
 		</nav>
-		<img
+		
+    <img
 			src="../src/img/hero-photo.jpg"
 			alt="hero-photo"
-			class="min-h-[500px] fixed -top-20 right-0 w-[48%] z-10"
+			class="min-h-[500px] fixed -top-20 right-0 w-[48%] z-10 sm:hidden"
 		/>
 
 		<img
 			src="/src/img/firma-photo.jpg"
 			alt="garden-photo"
-			class="min-h-[500px] fixed w-[48%] h-[100%] left-0 z-10 mirror-image"
+			class="min-h-[500px] fixed w-[48%] h-[100%] left-0 z-10 mirror-image sm:hidden"
 		/>
 
-		<section id="hero" class="grid grid-cols-2 bg-[#DCC1AB] h-[737px] relative">
-			<article class="grid gap-20 pl-20 items-center z-20 bg-[#DCC1AB]">
-				<span class="flex flex-col items-start gap-10 flex-shrink-0">
-					<h1 class="text-4xl font-medium leading-tight animate-on-scroll">
+		<section id="hero" class="grid grid-cols-2 sm:grid-cols-1 bg-beige sm:pt-20 h-[737px] relative">
+			<article class="grid gap-20 lg:pl-20 sm:px-10 items-center z-20 bg-beige">
+				<span class="flex flex-col gap-10">
+					<h1 class="animate-on-scroll">
 						Nowoczesna aranżacja Twojego ogrodu
 					</h1>
-					<p class="text-[16px] font-normal leading-6 animate-bottom-top">
+					<p class="font-normal leading-6 animate-bottom-top">
 						Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
 						realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
 						podejściem do każdego projektu.
 					</p>
-					<span class="flex gap-10">
-						<button class="rounded-xl px-2 bg-green-800 text-white">
+					<span class="flex sm:flex-col sm:gap-2 gap-10">
+						<button class="rounded-full px-4 py-2 bg-green text-gray button-animate-bottom-top">
 							Skontaktuj się z nami
 						</button>
-						<button class="rounded-xl px-2 border border-green-800">
-							Zobacz nasze realizacje
+						<button class="flex items-center justify-center gap-2 rounded-full px-4 py-2 border border-green text-green button-animate-bottom-top">
+							Zobacz nasze realizacje <img
+              src="../src/img/arrow-down.svg"
+              alt="arrow-left"
+              class="w-4 h-4 cursor-pointer"
+            />
 						</button>
 					</span>
 				</span>
 			</article>
-			<div class="w-full h-full">
+			<div>
 				<div
 					class="
 						absolute
@@ -92,8 +114,9 @@
 						p-6
 						items-start
 						gap-8
-						bg-gray-100
+						bg-gray
 						z-20
+            sm:hidden
 					"
 				>
 					<img
@@ -104,7 +127,7 @@
 					<img
 						src="../src/img/Arrow 1.svg"
 						alt="arrow-right"
-						class="w-6 h-auto rotate-180 cursor-pointer"
+						class="w-6 h-auto text-gray cursor-pointer mirror-image"
 					/>
 				</div>
 			</div>
@@ -112,12 +135,12 @@
 
 		<section
 			id="oferta"
-			class="z-20 relative flex flex-col gap-24 pt-32 pb-40 px-20 bg-[#F5F0EC]"
+			class="z-20 relative flex flex-col gap-24 pt-32 pb-40 px-20 sm:px-0 bg-gray"
 		>
-			<article class="flex flex-col gap-2 mx-40">
+			<article class="flex flex-col gap-2 sm:px-10  lg:mx-40">
 				<span class="text-xs text-green-600">Oferta</span>
 				<div class="flex flex-col gap-8">
-					<h2 class="text-4xl font-medium leading-tight animate-on-scroll">
+					<h2 class="animate-on-scroll">
 						Działamy <span class="italic">kompleksowo</span>
 					</h2>
 					<p class="text-[16px] font-normal leading-6 animate-bottom-top">
@@ -129,35 +152,35 @@
 				</div>
 			</article>
 
-			<article id="card_container" class="flex flex-row gap-16 justify-around">
-				<div id="card" class="animate-on-scroll animate-card">
+			<article class="flex flex-row sm:flex-col gap-16 justify-around sm:px-10">
+				<div id="card" class="animate-on-scroll animate-card shadow-xl">
 					<span class="flex flex-col gap-8 px-10 py-12">
 						<img src="/src/img/Icon.png" alt="pencil" class="w-10 h-10" />
-						<div class="flex flex-col gap-4">
-							<p class="text-xl font-medium leading-tight">Projekty</p>
-							<p>
+						<div id="card1" class="flex flex-col gap-4">
+							<p class="text-xl font-medium leading-tight animate-bottom-top">Projekty</p>
+							<p class="animate-bottom-top">
 								Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
 								wykorzystaniem istniejącej przestrzeni.
 							</p>
 						</div>
 					</span>
 					<button
-						class="flex flex-row gap-2 px-10 py-12 items-center underline"
+						class="flex w-fit h-fit flex-row gap-2 mx-10 mb-12 items-center hover-underline-animation-green"
 					>
 						<p>Dowiedz się więcej</p>
-						<img src="/src/img/Arrow 1.svg" class="rotate-180 h-4 w-4" />
+						<img src="/src/img/arrow-right-green.svg" class=" h-4 w-4" />
 					</button>
 				</div>
-				<div id="card" class="animate-on-scroll animate-card">
+				<div id="card" class="animate-on-scroll animate-card shadow-xl">
 					<span class="flex flex-col gap-8 px-10 py-12">
 						<img
 							src="/src/img/Wizualizacje.png"
 							alt="Wizualizacje"
 							class="w-16 h-10"
 						/>
-						<div class="flex flex-col gap-4">
-							<p class="text-xl font-medium leading-tight">Wizualizacje</p>
-							<p>
+						<div id="card2" class="flex flex-col gap-4">
+							<p class="text-xl font-medium leading-tight animate-bottom-top">Wizualizacje</p>
+							<p class="animate-bottom-top">
 								Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
 								spaceru animowanego w technologii 3D.
 							</p>
@@ -167,22 +190,22 @@
 						class="
 							flex flex-row
 							gap-2
-							px-10
-							py-12
+							mx-10
+							mb-12
 							items-center
-							underline underline-offset-8
+							hover-underline-animation-green
 						"
 					>
 						<p>Dowiedz się więcej</p>
-						<img src="/src/img/Arrow 1.svg" class="rotate-180 h-4 w-4" />
+						<img src="/src/img/arrow-right-green.svg" class="text-gray h-4 w-4" />
 					</button>
 				</div>
-				<div id="card" class="animate-on-scroll animate-card">
+				<div id="card" class="animate-on-scroll animate-card shadow-xl">
 					<span class="flex flex-col gap-8 px-10 py-12">
 						<img src="/src/img/Realizacje.png" alt="pencil" class="w-10 h-10" />
-						<div class="flex flex-col gap-4">
-							<p class="text-xl font-medium leading-tight">Realizacje</p>
-							<p>
+						<div id="card3" class="flex flex-col gap-4">
+							<p class="text-xl font-medium leading-tight animate-bottom-top">Realizacje</p>
+							<p class="animate-bottom-top">
 								Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
 								zaawansowanych technologii.
 							</p>
@@ -190,16 +213,16 @@
 					</span>
 					<button
 						class="
-							flex flex-row
-							gap-2
-							px-10
-							py-12
-							items-center
-							underline underline-offset-8
+            flex flex-row
+            gap-2
+            mx-10
+            mb-12
+            items-center
+            hover-underline-animation-green
 						"
 					>
 						<p>Dowiedz się więcej</p>
-						<img src="/src/img/Arrow 1.svg" class="rotate-180 h-4 w-4" />
+						<img src="/src/img/arrow-right-green.svg" class="text-gray h-4 w-4" />
 					</button>
 				</div>
 			</article>
@@ -207,15 +230,15 @@
 
 		<section
 			id="about"
-			class="grid grid-cols-2 gap-16 bg-green-700 h-[737px] relative text-white"
+			class="grid grid-cols-2 sm:grid-cols-1 gap-16 bg-green h-[737px] relative text-gray"
 		>
-			<article class="w-full h-full transparent z-5"></article>
+			<article class="w-full h-full transparent z-5 sm:hidden"></article>
 
-			<article class="grid gap-20 z-20 bg-green-700 pl-24 pr-20 items-center">
+			<article class="grid gap-20 z-20 bg-green pl-24 pr-20 items-center">
 				<div class="flex flex-col items-start gap-10 flex-shrink-0">
 					<span>
-						<p class="text-xs">O firmie</p>
-						<h3 class="text-4xl font-medium leading-tight animate-on-scroll">
+						<p class="tag text-gray">O firmie</p>
+						<h3 class="animate-on-scroll">
 							Tworzymy z <span class="italic">pasją</span>
 						</h3>
 					</span>
@@ -227,71 +250,76 @@
 						minimalizm, geometria i elegancka prostota. Tworzymy ogrody
 						małoobsługowe, dostosowane do współczesnego trybu życia.
 					</p>
-					<button class="rounded-xl px-2 border border-white w-fit">
-						Poznaj nas bliżej
-					</button>
+          <button class="flex items-center gap-2 rounded-full px-4 py-2 border border-white text-gray button-animate-bottom-top">
+            Poznaj nas bliżej
+            <img
+            src="../src/img/arrow-right.svg"
+            alt="arrow-left"
+            class="w-4 h-4"
+          />
 				</div>
 			</article>
 		</section>
 
 		<section
 			id="realizacje"
-			class="z-20 relative flex flex-col gap-24 pt-32 pb-10 bg-[#DCC1AB]"
+			class="z-20 relative flex flex-col gap-24 pt-32 pb-10 bg-beige"
 		>
 			<article class="px-20">
-				<span class="text-xs text-green-600">Realizacje</span>
-				<h4 class="text-4xl font-medium leading-tight animate-on-scroll">
+				<span class="tag text-green">Realizacje</span>
+				<h4 class="animate-on-scroll">
 					Nasze <span class="italic">projekty</span>
 				</h4>
 			</article>
 		</section>
 
-		<section id="instagram" class="z-20 relative py-16 px-24 bg-white">
-			<article class="flex justify-center py-32 mx-48 bg-green-700 text-white">
-				<div class="flex flex-row w-fit gap-14 items-center">
-					<h5 class="text-4xl font-normal leading-[120%] tracking-tighter">
-						Zostamy w kontakcie! <br />
+		<section id="instagram" class="z-20 sm:p-10 relative lg:py-16 lg:px-24 bg-gray">
+			<article class="flex justify-center lg:py-32 lg:mx-48 bg-green text-gray">
+				<div class="flex flex-row items-start sm:flex-col sm:p-10 w-fit gap-14 sm:gap-6 ">
+					<h5 class="animate-on-scroll">
+						Zostańmy w kontakcie! <br />
 						Znajdziesz nas na
 						<span class="font-bold italic">Instagramie</span>.
 					</h5>
-					<span class="flex flex-col flex-shrink-0 gap-2">
+					<span class="flex flex-col gap-2 animate-bottom-top ">
 						<p>
-							Śledź nasze <br />
+							Śledź nasze <br class="sm:hidden"/>
 							najnowsze realizacje!
 						</p>
-						<button class="px-2 rounded-xl border w-fit">Instagram</button>
+						<button class="px-4 py-2 rounded-xl border w-fit button-animate-bottom-top">Instagram</button>
 					</span>
 				</div>
 			</article>
 		</section>
 
 		<footer
-			class="z-20 relative flex flex-col gap-32 bg-black px-72 py-20 text-white"
+			class="z-20 relative flex flex-col gap-32 bg-black lg:px-72 sm:px-10 py-20 text-gray"
 		>
 			<article class="flex flex-col">
 				<span
 					class="
 						flex
-						items-center
+            sm:flex-col
+						items-cente
 						justify-between
 						border-b border-gray-400
 						pb-16
 					"
 				>
-					<p><span class="font-bold">giard</span>Design</p>
-					<div class="flex gap-4 items-center">
+					<img src="/src/img/giarddesign (1).svg" alt="logo" class=""/>
+					<div class="flex sm:flex-col sm:pt-4 gap-4 lg:items-center">
 						<p>Daj znać, co możemy dla Ciebie zrobić!</p>
-						<button class="px-4 py-2 rounded-full bg-green-700">
+						<button class="px-4 py-2 rounded-full w-fit bg-green">
 							Skontaktuj się z nami
 						</button>
 					</div>
 				</span>
-				<span class="flex justify-between pt-16 items-center">
+				<span class="flex sm:flex-col sm:items-start sm:gap-4 justify-between pt-16 sm:pt-8 items-center">
 					<div class="flex gap-4">
 						<p class="cursor-pointer">Kontakt</p>
 						<p class="cursor-pointer">Instagram</p>
 						<p class="cursor-pointer">Facebook</p>
-						<p>LinkedIn</p>
+						<p class="cursor-pointer">LinkedIn</p>
 					</div>
 					<div class="flex gap-4">
 						<p>000-000-000</p>
@@ -300,7 +328,7 @@
 				</span>
 			</article>
 
-			<article class="flex justify-between pt-30 h-fit items-center">
+			<article class="flex justify-between h-fit items-center">
 				<p>Prawa zastrzeżone @ 2022</p>
 				<p class="flex">made by <img src="../src/img/logo-full-light.svg" /></p>
 			</article>
