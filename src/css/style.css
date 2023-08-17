@@ -1,0 +1,87 @@
+.mirror-image {
+	transform: scaleX(-1);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+nav {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	height: 3rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	z-index: 50;
+}
+
+li {
+	cursor: pointer;
+}
+
+.menu-item {
+	position: relative;
+}
+
+.submenu-toggle {
+	cursor: pointer;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	right: 0;
+	margin-top: 20px;
+	width: 400%;
+	background-color: white;
+	z-index: 50;
+	opacity: 0;
+}
+
+.submenu-item {
+	height: 40px;
+	display: flex;
+	padding-right: 8px;
+	justify-content: end;
+	align-items: center;
+}
+
+.submenu-item:hover {
+	background-color: #dcc1ab;
+	transition: 0.3s ease-in-out;
+}
+
+.menu-item.active .submenu {
+	display: block;
+	opacity: 1;
+	transition: all 1s ease-in-out forwards;
+}
+
+.searchbar {
+	width: 0;
+	overflow: hidden;
+	transition: width 0.3s ease-in-out;
+}
+
+#card {
+	display: flex;
+	flex-direction: column;
+	width: 24rem;
+	height: 24rem;
+	background-color: white;
+	border-radius: 1rem;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+#card:hover{
+  box-shadow: black;
+}

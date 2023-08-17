@@ -1,0 +1,25 @@
+.click-animation {
+	animation: expandSearchbar 1s forwards; /* Apply animation */
+}
+
+.close-animation {
+	animation: closeSearchbar 1s forwards;
+}
+
+@keyframes expandSearchbar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 200px; /* Adjust the desired expanded width */
+	}
+}
+
+@keyframes closeSearchbar {
+	0% {
+		width: 200px;
+	}
+	100% {
+		width: 0; /* Adjust the desired expanded width */
+	}
+}
