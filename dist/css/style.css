@@ -108,19 +108,20 @@ button {
 .submenu {
 	display: none;
 	position: absolute;
-	right: 0;
+	left: 0;
 	margin-top: 44px;
 	width: 400%;
 	background-color: white;
 	z-index: 50;
 	opacity: 0;
+  text-align: start;
 }
 
 #submenu-item {
 	height: 40px;
 	display: flex;
-	padding-right: 8px;
-	justify-content: end;
+	padding-left: 8px;
+	justify-content: start;
 	align-items: center;
 }
 
@@ -200,4 +201,8 @@ button {
 	border: none;
 	cursor: pointer;
 	color: white;
+}
+
+.filter-green-tint {
+  filter: sepia(100%) hue-rotate(90deg) saturate(500%) brightness(1.2);
 }

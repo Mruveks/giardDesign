@@ -3,8 +3,8 @@ module.exports = {
 	content: ["./dist/*.{html,js}"],
 	theme: {
 		screens: {
-			sm: { 'min': "250px", 'max': "759px" },
-			md: { 'min': "760px", 'max': "1239px" },
+			sm: { min: "250px", max: "759px" },
+			md: { min: "760px", max: "1239px" },
 			lg: "1240px",
 		},
 		colors: {
@@ -19,7 +19,11 @@ module.exports = {
 			secondary: ["Inter"],
 		},
 
-		extend: {},
+		extend: {
+			backgroundImage: {
+				about: "url('/dist/img/hero-photo.jpg')",
+			},
+		},
 	},
 	plugins: [],
 };

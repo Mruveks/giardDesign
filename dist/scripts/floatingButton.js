@@ -8,7 +8,7 @@ expandButton.addEventListener("click", () => {
 		gradient.style.opacity = "0";
 		container.classList.add("expanded");
 		container.classList.remove("closed");
-		expandButton.innerHTML = 'Close <img src="img/arrow-down.svg" class="rotate-180"/>';
+		expandButton.innerHTML = 'Close <img src="img/arrow-down.svg" style="transform: rotate(180deg)"/>';
 	} else {
 		container.classList.add("height");
 		gradient.style.opacity = "1";
