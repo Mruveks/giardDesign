@@ -14,8 +14,9 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.19",
-    "gsap": "^3.12.2",
+    "autoprefixer": "^10.4.15",
     "i": "^0.3.7",
-    "npm": "^9.8.1"
+    "npm": "^9.8.1",
+    "postcss": "^8.4.28"
   }
 }
