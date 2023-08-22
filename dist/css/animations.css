@@ -1,3 +1,33 @@
+.height {
+	height: 600px;
+	transition: height 2s ease;
+}
+.expanded {
+	animation: expandGallery 2s forwards;
+}
+
+.closed {
+	animation: closeGallery 2s forwards;
+}
+
+@keyframes expandGallery {
+	0% {
+		height: 600px;
+	}
+	100% {
+		height: 1600px;
+	}
+}
+
+@keyframes closeGallery {
+	0% {
+		height: 1600px;
+	}
+	100% {
+		height: 600px;
+	}
+}
+
 .click-animation {
 	animation: expandSearchbar 2s forwards;
 }

@@ -120,8 +120,8 @@ button {
 }
 
 #submenu-item:hover {
-	background-color: #dcc1ab;
-	transition: 0.3s ease-in-out;
+	background-color: #F5F0EC;
+	transition: 0.4s ease-in-out;
 }
 
 .menu-item.active .submenu {
@@ -163,33 +163,4 @@ button {
 	z-index: 1;
   opacity: 1;
   transition: opacity 2s ease; 
-}
-.height {
-	height: 600px;
-	transition: height 2s ease;
-}
-.expanded {
-	animation: expandGallery 2s forwards;
-}
-
-.closed {
-	animation: closeGallery 2s forwards;
-}
-
-@keyframes expandGallery {
-	0% {
-		height: 600px;
-	}
-	100% {
-		height: 1600px;
-	}
-}
-
-@keyframes closeGallery {
-	0% {
-		height: 1600px;
-	}
-	100% {
-		height: 600px;
-	}
 }
