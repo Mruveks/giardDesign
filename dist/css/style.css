@@ -202,7 +202,3 @@ button {
 	cursor: pointer;
 	color: white;
 }
-
-.filter-green-tint {
-  filter: sepia(100%) hue-rotate(90deg) saturate(500%) brightness(1.2);
-}

@@ -71,7 +71,7 @@
 			height: 600px;
 		}
 	}
-  @keyframes expandSearchbar {
+  	@keyframes expandSearchbar {
 		0% {
 			width: 0px;
 		}
