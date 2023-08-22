@@ -1,0 +1,150 @@
+body {
+	font-family: "DIN Alternate", sans-serif;
+	overflow-x: hidden;
+}
+
+.mirror-image {
+	transform: scaleX(-1);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+li {
+	cursor: pointer;
+	text-align: center;
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: -0.14px;
+}
+
+h1 {
+	font-family: "Montserrat";
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 70px;
+}
+
+h2,
+h3,
+h4 {
+	font-family: "Montserrat";
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 115%;
+	letter-spacing: -1.44px;
+}
+
+h5 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 759px) {
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 800;
+	}
+	h2,
+	h3,
+	h4 {
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+  h5{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300px;
+  }
+}
+
+p,
+button {
+	font-family: "Inter";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+	letter-spacing: -0.16px;
+}
+
+.tag {
+	font-family: "Inter";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 18px */
+	letter-spacing: -0.12px;
+}
+
+.menu-item {
+	position: relative;
+}
+
+.submenu-toggle {
+	cursor: pointer;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	right: 0;
+	margin-top: 44px;
+	width: 400%;
+	background-color: white;
+	z-index: 50;
+	opacity: 0;
+}
+
+#submenu-item {
+	height: 40px;
+	display: flex;
+	padding-right: 8px;
+	justify-content: end;
+	align-items: center;
+}
+
+#submenu-item:hover {
+	background-color: #dcc1ab;
+	transition: 0.3s ease-in-out;
+}
+
+.menu-item.active .submenu {
+	display: block;
+	opacity: 1;
+	transition: all 1s ease-in-out forwards;
+}
+
+.searchbar {
+	width: 0;
+	overflow: hidden;
+	transition: width 0.3s ease-in-out;
+}
+
+#card {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 1rem;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+#card:hover {
+	box-shadow: black;
+}
