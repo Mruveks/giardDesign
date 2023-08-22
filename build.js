@@ -1,4 +1,5 @@
 const { exec } = require('child_process');
+const fs = require('fs-extra');
 
 exec('npx tailwindcss build src/input.css -o dist/output.css', (err, stdout, stderr) => {
   if (err) {
@@ -7,3 +8,8 @@ exec('npx tailwindcss build src/input.css -o dist/output.css', (err, stdout, std
   }
   console.log('TailwindCSS built successfully');
 });
+
+fs.copySync('src', 'dist');
+console.log('Source folder copied to dist');
+
+console.log('Build process completed');
