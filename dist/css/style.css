@@ -42,12 +42,12 @@ h4 {
 }
 
 h5 {
-  font-family: "Montserrat";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: -2px;
+	font-family: "Montserrat";
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	letter-spacing: -2px;
 }
 
 @media (max-width: 759px) {
@@ -63,11 +63,11 @@ h5 {
 		line-height: 20px;
 		font-weight: 400;
 	}
-  h5{
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 300px;
-  }
+	h5 {
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 300px;
+	}
 }
 
 p,
@@ -147,4 +147,49 @@ button {
 
 #card:hover {
 	box-shadow: black;
+}
+.gradient-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 80%;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		#DCC1AB 100%
+	);
+	pointer-events: none;
+	z-index: 1;
+  opacity: 1;
+  transition: opacity 2s ease; 
+}
+.height {
+	height: 600px;
+	transition: height 2s ease;
+}
+.expanded {
+	animation: expandGallery 2s forwards;
+}
+
+.closed {
+	animation: closeGallery 2s forwards;
+}
+
+@keyframes expandGallery {
+	0% {
+		height: 600px;
+	}
+	100% {
+		height: 1600px;
+	}
+}
+
+@keyframes closeGallery {
+	0% {
+		height: 1600px;
+	}
+	100% {
+		height: 600px;
+	}
 }

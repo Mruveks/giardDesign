@@ -12,7 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	</head>
 
-	<body>
+	<body class="h-fit">
 		<nav class="fixed flex lg:w-full py-[24px] lg:px-20 sm:px-0 justify-between items-center bg-white z-50">
 			<header class="animate-top-down">
 				<img src="img/giarddesign.svg" alt="logo"/>
@@ -89,11 +89,11 @@
 						podejściem do każdego projektu.
 					</p>
 					<span class="flex sm:flex-col sm:gap-2 gap-10">
-						<button class="rounded-full px-4 py-2 bg-green text-gray button-animate-bottom-top">
-							Skontaktuj się z nami
+						<button class="submenu-item menu-item rounded-full px-4 py-2 bg-green text-gray button-animate-bottom-top">
+							<a href="#" data-target="kontakt">Skontaktuj się z nami</a>
 						</button>
-						<button class="flex items-center justify-center gap-2 rounded-full px-4 py-2 border border-green text-green button-animate-bottom-top">
-							Zobacz nasze realizacje <img
+						<button class="flex items-center submenu-item menu-item justify-center gap-2 rounded-full px-4 py-2 border border-green text-green button-animate-bottom-top">
+							<a href="#" data-target="realizacje">Zobacz nasze realizacje</a> <img
               src="img/arrow-down.svg"
               alt="arrow-left"
               class="w-4 h-4 cursor-pointer"
@@ -261,14 +261,39 @@
 
 		<section
 			id="realizacje"
-			class="z-20 relative flex flex-col gap-24 pt-32 pb-10 bg-beige"
+			class="z-20 relative flex flex-col pt-32 bg-beige"
 		>
-			<article class="px-20">
+			<article class="px-20 pb-20 items-start">
 				<span class="tag text-green">Realizacje</span>
 				<h4 class="animate-on-scroll">
 					Nasze <span class="italic">projekty</span>
 				</h4>
 			</article>
+      <article class="items-center">
+
+        <div id="grid-container" class="relative flex flex-row text-center gap-20 justify-center height overflow-hidden">
+          <div class="flex flex-col gap-20">
+            <img src="img/Realizacje_photo3.png" alt="realizacje-3" />
+            <img src="img/Realizacje_photo6.png" alt="realizacje-1" />
+            <img src="img/Realizacje_photo7.png" alt="realizacje-4" />
+          </div>
+          <div class="flex flex-col gap-20">          
+            <img src="img/Realizacje_photo1.png" alt="realizacje-1" />
+            <img src="img/Realizacje_photo5.png" alt="realizacje-5" />
+          </div>
+          <div class="flex flex-col gap-20">          
+            <img src="img/Realizacje_photo8.png" alt="realizacje-5" />
+            <img src="img/Realizacje_photo9.png" alt="realizacje-6"/>
+            <img src="img/Realizacje_photo4.png" alt="realizacje-7" />
+          </div>
+        </div>
+        <div id="gradient" class="gradient-overlay"></div>
+        <button id="expandButton" class="relative flex items-center gap-2 inset-1/2 transform -translate-x-1/2 z-50 rounded-full border border-black w-fit my-2 px-4 py-2 ">
+          Expand
+          <img src="img/arrow-down.svg" />
+        </button>
+      </article>
+
 		</section>
 
 		<section id="kontakt" class="z-20 sm:p-10 relative lg:py-16 lg:px-24 bg-gray">
@@ -284,7 +309,7 @@
 							Śledź nasze <br class="sm:hidden"/>
 							najnowsze realizacje!
 						</p>
-						<button class="px-4 py-2 rounded-xl border w-fit button-animate-bottom-top">Instagram</button>
+						<button class="px-4 py-2 rounded-xl border w-fit button-animate-bottom-top"><a href="https://www.instagram.com/adrespect/" target="_blank">Instagram</a></button>
 					</span>
 				</div>
 			</article>
@@ -334,5 +359,6 @@
 		<script src="scripts/eventListeners.js"></script>
     <script src="scripts/navigation.js"></script>
 		<script src="scripts/scrollAnimations.js"></script>
+    <script src="scripts/floatingButton.js"></script>
 	</body>
 </html>

@@ -17,6 +17,7 @@
     "autoprefixer": "^10.4.15",
     "fs-extra": "^11.1.1",
     "i": "^0.3.7",
+    "masonry-layout": "^4.2.2",
     "npm": "^9.8.1",
     "postcss": "^8.4.28"
   }
