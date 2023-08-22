@@ -202,3 +202,8 @@ button {
 	cursor: pointer;
 	color: white;
 }
+@media (max-width: 759px) {
+	.popup-close {
+    font-size: 0;
+	}
+}

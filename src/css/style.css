@@ -114,7 +114,7 @@ button {
 	background-color: white;
 	z-index: 50;
 	opacity: 0;
-  text-align: start;
+	text-align: start;
 }
 
 #submenu-item {
@@ -201,4 +201,11 @@ button {
 	border: none;
 	cursor: pointer;
 	color: white;
+}
+
+@media (max-width: 759px) {
+	.popup-close {
+		display: hidden;
+    color: transparent;
+	}
 }
