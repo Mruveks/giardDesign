@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const fs = require('fs-extra');
 
-exec('npx tailwindcss build src/input.css -o dist/output.css', (err, stdout, stderr) => {
+exec('npx tailwindcss build dist/input.css -o dist/output.css', (err, stdout, stderr) => {
   if (err) {
     console.error('Error building TailwindCSS:', err);
     return;
